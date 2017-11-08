@@ -1,0 +1,12 @@
+[package]
+name = "rust_playground"
+path="main.rs"
+version = "0.1.0"
+authors = ["micucci"]
+include = ["src/**/*.rs"]
+
+[dependencies]
+hyper = "*"
+serde = "*"
+serde_derive = "*"
+serde_json = "*"
