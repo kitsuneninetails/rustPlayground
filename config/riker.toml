@@ -1,0 +1,43 @@
+debug = true
+
+[log]
+# max level to log
+level = "debug"
+filter = ["rocket", "hyper"]
+
+# log format to use
+# correlates to format!(log_format, date=, time=, level=, module=, body=);
+# since named parameters are used the order of the fields is flexible
+# the formatting of each field can be changed also
+# e.g. to completely hide a field: {module:.0}
+# See: https://doc.rust-lang.org/std/fmt/#syntax
+
+# {date}    the calendar day
+# {time}    the calendar time
+# {level}   the level for the entry
+# {module}  the module path originating the entry
+# {body}    the message body
+log_format = "{date} {time} {level} [{module}] {body}"
+date_format = "%Y-%m-%d"
+time_format = "%H:%M:%S%:z"
+
+[mailbox]
+msg_process_limit = 1000
+
+[dispatcher]
+pool_size = 4
+
+[scheduler]
+frequency_millis = 50
+
+[cqrs]
+sleep_after_secs = 120
+
+[tcp]
+initial_events = 2048
+event_frequency_millis = 50
+in_buf_max_bytes = 1024000
+out_buf_max_bytes = 1024000
+in_read_bytes = 1024
+out_write_bytes = 1024
+

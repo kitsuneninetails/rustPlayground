@@ -1,12 +1,31 @@
 [package]
 name = "rust_playground"
-path="main.rs"
 version = "0.1.0"
 authors = ["micucci"]
-include = ["src/**/*.rs"]
+
+[[bin]]
+name="linked_list"
+path="src/linked_list.rs"
+
+[[bin]]
+name="list"
+path="src/list.rs"
+
+[[bin]]
+name="scala_list"
+path="src/scala_list.rs"
+
+[[bin]]
+name="state_machine"
+path="src/state_machine.rs"
+
+[[bin]]
+name="test"
+path="src/test.rs"
+
+[[bin]]
+name="effects"
+path="src/effects.rs"
 
 [dependencies]
-hyper = "*"
-serde = "*"
-serde_derive = "*"
-serde_json = "*"
+num-traits = "*"
